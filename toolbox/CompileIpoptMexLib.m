@@ -22,7 +22,7 @@ CMD = [ 'mex -largeArrayDims -Isrc ' SRC ];
 
 if isOctave
   CMD = [ 'mkoctfile --mex ' SRC ' -Wall -O2 -g -Isrc '];
-  if ismac
+  if ismac && 0     % RDZ: force build from system IPOPT libs
     %
     % libipopt must be set with:
     % install_name_tool -id "@loader_path/libipopt.3.dylib" libipopt.3.dylib
